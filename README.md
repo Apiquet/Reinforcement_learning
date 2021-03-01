@@ -8,4 +8,4 @@ qlearning_FrozenLake.ipynb notebook explore q-learning technique in FrozenLake o
 
 A neural network was also used to teach an agent to land on a specific position. The following agent was trained for 3k episodes:
 
-![Image](imgs/agent_3k_episodes.gif)
+![Image](imgs/lunarlander_agent_3k_episodes.gif)
