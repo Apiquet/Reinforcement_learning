@@ -13,3 +13,5 @@ A neural network was also used to teach an agent to land on a specific position.
 The same architecture was used in the CartPole openai gym environment where a pole is attached by an un-actuated joint to a cart, which moves along a frictionless track:
 
 ![Image](imgs/cartpole_agent_750_episodes.gif)
+
+The architecture and methods of the agent have been designed to adapt to other open gym environments.
