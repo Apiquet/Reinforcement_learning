@@ -12,6 +12,11 @@ import numpy as np
 import collections
 
 
+class ScaledFrom0To1Wrapper(gym.ObservationWrapper):
+    def observation(self, obs):
+        return np.array(obs).astype(np.float32) / 255.0
+
+
 class Res84x84x1Wrapper(gym.ObservationWrapper):
     """Change input resolution from (210, 160, 3) to (84, 84, 1)
     Convert to grayscale with ponderation: r*0.299, g*0.587, b*0.114
