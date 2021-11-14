@@ -28,3 +28,18 @@ class Res84x84x1Wrapper(gym.ObservationWrapper):
             frame[:, :, 2] * 0.114
         assert np.prod(frame.shape) == 84*84*1
         return frame
+
+class StackLast4Wrapper(gym.ObservationWrapper):
+    """Stack last 4 frames as input"""
+    def __init__(self, env, size=4):
+        super(StackLast4Wrapper, self).__init__(env)
+
+    def reset(self):
+        self.buffer = np.zeros(
+            (84, 84, 4), dtype=np.float32)
+        return self.observation(self.env.reset())
+
+    def observation(self, observation):
+        self.buffer[:, :, :-1] = self.buffer[:, :, 1:]
+        self.buffer[:, :, -1] = observation
+        return self.buffer
