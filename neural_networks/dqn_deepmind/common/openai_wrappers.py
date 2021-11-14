@@ -36,7 +36,7 @@ class Res84x84x1Wrapper(gym.ObservationWrapper):
 
 class StackLast4Wrapper(gym.ObservationWrapper):
     """Stack last 4 frames as input"""
-    def __init__(self, env, size=4):
+    def __init__(self, env):
         super(StackLast4Wrapper, self).__init__(env)
 
     def reset(self):
@@ -48,3 +48,26 @@ class StackLast4Wrapper(gym.ObservationWrapper):
         self.buffer[:, :, :-1] = self.buffer[:, :, 1:]
         self.buffer[:, :, -1] = observation
         return self.buffer
+
+class Skip4FramesAndReturnMaxFrom2FramesWrapper(gym.Wrapper):
+    def __init__(self, env):
+        """Repeat action for 4 frames, get max from last 2 to avoid blink"""
+        super(Skip4FramesAndReturnMaxFrom2FramesWrapper, self).__init__(env)
+        self.frames_buffer = collections.deque(maxlen=2)
+
+    def step(self, action):
+        sum_reward = 0.0
+        for _ in range(4):
+            obs, reward, done, info = self.env.step(action)
+            self.frames_buffer.append(obs)
+            sum_reward += reward
+            if done:
+                break
+        max_frame = np.max(np.stack(self.frames_buffer), axis=0)
+        return max_frame, sum_reward, done, info
+
+    def reset(self):
+        self.frames_buffer.clear()
+        obs = self.env.reset()
+        self.frames_buffer.append(obs)
+        return obs
