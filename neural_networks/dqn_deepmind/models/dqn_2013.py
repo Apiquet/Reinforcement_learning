@@ -29,6 +29,8 @@ class DQN(Model):
             Dense(n_actions, name="Output")],
             name="DQN_2013"
         )
+        opt = tf.keras.optimizers.Adam(lr=self.policy_learning_rate)
+        self.model.compile(optimizer=opt, loss='categorical_crossentropy')
 
     def call(self, x):
         return self.model(x)
