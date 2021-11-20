@@ -1,4 +1,6 @@
 # Reinforcement Learning
+
+## Common strategies
  
 The project is explained [here](https://apiquet.com/2021/02/07/reinforcement-learning/)
 
@@ -15,3 +17,7 @@ The project is explained [here](https://apiquet.com/2021/02/07/reinforcement-lea
 ![Image](imgs/cartpole_agent_750_episodes.gif)
 
 The architecture and methods of the agent have been designed to adapt to other open gym environments.
+
+## Implementation of Deep Mind DQN
+
+The project is explained [here](https://apiquet.com/2021/11/12/playing-atari-with-deep-reinforcement-learning//)
