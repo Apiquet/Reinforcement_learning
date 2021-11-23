@@ -18,6 +18,6 @@ The project is explained [here](https://apiquet.com/2021/02/07/reinforcement-lea
 
 The architecture and methods of the agent have been designed to adapt to other open gym environments.
 
-## Implementation of Deep Mind DQN
+## Implementation of Deep Mind DQN [IN PROGRESS]
 
 The project is explained [here](https://apiquet.com/2021/11/12/playing-atari-with-deep-reinforcement-learning//)
