@@ -20,4 +20,6 @@ The architecture and methods of the agent have been designed to adapt to other o
 
 ## Implementation of Deep Mind DQN [IN PROGRESS]
 
-The project is explained [here](https://apiquet.com/2021/11/12/playing-atari-with-deep-reinforcement-learning//)
+The project is explained [here](https://apiquet.com/2021/11/12/playing-atari-with-deep-reinforcement-learning/)
+
+It explains how to build a neural network to play Atari games.
