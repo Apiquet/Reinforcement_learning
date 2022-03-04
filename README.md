@@ -22,4 +22,4 @@ The architecture and methods of the agent have been designed to adapt to other o
 
 The project is explained [here](https://apiquet.com/2021/11/12/playing-atari-with-deep-reinforcement-learning/)
 
-It explains all the steps involved in building a neural network to play Atari games: loading the OpenAi Gym environment, preprocessing the environment to feed the CNN, building the CNN, building the training process.
+It explains all the steps involved in building a neural network to play Atari games; how to: get the OpenAi Gym environment, preprocess the environment to feed the CNN, implement the CNN, create the training loop.
