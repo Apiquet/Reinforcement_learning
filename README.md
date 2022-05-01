@@ -2,7 +2,7 @@
 
 ## Common strategies
  
-The project is explained [here](https://apiquet.com/2021/02/07/reinforcement-learning/)
+The project is explained [here](https://apiquet.com/2021/02/07/reinforcement-learning/) and describes how to do Reinforcement Learning with q-learning and neural networks.
 
 * qlearning_FrozenLake.ipynb notebook explore q-learning technique in FrozenLake openai gym environment:
 
